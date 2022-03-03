@@ -1,0 +1,21 @@
+#since the repo is public and already cloned the easiest way to get authed is to make a change and push it to the repo. Before that you have to give your username and password to the global config for git
+
+git clone https://github.com/abortedalien/dragun0v
+
+cd dragun0v
+
+git config --global user.name "your_github_username"
+git config --global user.email "your_github_email"
+
+#once you run those commands make a change and run through the git add and git commit commands
+
+git add . 
+git commit -m "your_message_here"
+
+#once you push you’ll be promoted for your username and the personal access token
+
+git push -u origin main
+
+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
+
+git status

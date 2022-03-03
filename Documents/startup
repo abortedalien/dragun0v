@@ -1,0 +1,56 @@
+
+!Don't forget to remove the /arch-install-base and ~/arch-install-base directories when you're done. Otherwise you'll have scripts laying around with your passwords in plaintext.
+
+sudo pacman -S base-devel xorg xdg-utils xdg-user-dirs dmenu git vim thunar i3 code firefox-developer-edition kitty discord neofetch rofi pavucontrol zsh
+
+if command -v curl >/dev/null 2>&1; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+else
+  sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+fi
+
+sudo vim /etc/pacman.conf
+
+/[multi     (not testing)
+
+sudo pacman -Sy lib32-nvidia-utils steam
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+git clone --recursive https://github.com/andresgongora/synth-shell.git
+chmod +x synth-shell/setup.sh
+cd synth-shell
+./setup.sh
+
+yay -S polybar spotify
+
+git clone https://github.com/abortedalien/dragun0v
+
+ctrl+h (show hidden files)
+
+move dragun0v files to respective places
+
+yay -S siji-git ttf-unifont bullshit hollywood sptlrx-bin picom-git spotifywm-git betterlockscreen google-chrome appimagelauncher papirus-folders-git
+
+sudo pacman -S gparted lxappearance terminology guake playerctl pacman-contrib ranger arandr dialog numlockx mtools dosfstools network-manager-applet wpa_supplicant bluez bluez-utils cups gvfs arc-gtk-theme papirus-icon-theme ttf-font-awesome galculator qt5ct ttf-jetbrains-mono nitrogen os-prober wqy-zenhei cmatrix cowsay lolcat doge figlet asciiquarium rofi-emoji spotifyd stack ttf-liberation reflector bash-completion unzip gimp libreoffice btop
+
+papirus-folders -C violet --theme Papirus-Dark
+
+betterlockscreen -u Pictures/Wallpapers/cityscape.jpg
+
+sudo pacman -S virtualbox
+
+sudo modprobe vboxdrv
+
+sudo usermod -aG vboxusers dragun0v
+
+sudo pacman -S virtualbox-guest-iso
+
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+emerge
